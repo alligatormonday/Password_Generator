@@ -57,10 +57,10 @@ function generatePassword() {
   // Once all inputs have received. Generate an output for amount of characters user chose. 
   // Based on users character choice, randomize the string of data for that given character/variable. 
   // 
-  
+
   userLength = parseInt(userLength)
 
-  
+
 
   if (userLowercase === true) {
 
@@ -87,15 +87,22 @@ function generatePassword() {
   }
 
   if (userLength >= 8 && userLength <= 128) {
-    
-    for (let i = 0; i < userLength; i++){
+
+    for (let i = 0; i < userLength; i++) {
       let randomCharacter = passwordSelections[Math.floor(Math.random() * passwordSelections.length)];
       password = password + randomCharacter
     }
+
+  } 
+  
+  else {
+
+    alert("CHARACTER REQUIREMENT NOT MET! Character limit must be between 8 to 128 characters. Please try again.")
+
   }
-  
-  
-  
+
+
+
   // Code out for loop up until the desired character limit is reached, which is stored in the 'userLength' variable. 
   return password;
 
