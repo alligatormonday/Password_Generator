@@ -13,30 +13,29 @@ function writePassword() {
   passwordText.value = password;
 }
 
-const lowercase = "abcdefghijklmnopqrstuvwxyz"
-
-const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-const numeric = "0123456789"
-
-const special = "!@#$%^&*()"
-// console.log(uppercase[4])
-
-
 /**
  * generate a password based on certain criteria
  */
 function generatePassword() {
 
+  const lowercase = "abcdefghijklmnopqrstuvwxyz"
+
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+  const numeric = "0123456789"
+
+  const special = "~!@#$%^&*()-_=+"
+  // console.log(uppercase[4])
+
   // prompt for password criteria 
   // Collect data from user
   let userLength = prompt("Choose amount of characters between 8 to 128")
-  // validate user responses 
   let userLowercase = confirm("Do you want lowercase characters?")
   let userUppercase = confirm("Do you want uppercase characters?")
   let userNumeric = confirm("Do you want numeric characters?")
   let userSpecial = confirm("Do you want special characters?")
   // console.log(userLength, userLowercase)
+  // validate user responses 
 
   // Criteria: 8 to 128 characters
 
@@ -68,11 +67,13 @@ function generatePassword() {
 
   }
 
+  
   if (userUppercase === true) {
 
     passwordSelections = passwordSelections + uppercase
 
   }
+
 
   if (userNumeric === true) {
 
@@ -80,11 +81,13 @@ function generatePassword() {
 
   }
 
+
   if (userSpecial === true) {
 
     passwordSelections = passwordSelections + special
 
   }
+  // console.log(passwordSelections)
 
   if (userLength >= 8 && userLength <= 128) {
 
@@ -93,14 +96,22 @@ function generatePassword() {
       password = password + randomCharacter
     }
 
-  } 
-  
+  }
+
   else {
 
-    alert("CHARACTER REQUIREMENT NOT MET! Character limit must be between 8 to 128 characters. Please try again.")
+    alert("CHARACTER REQUIREMENT NOT MET! Character limit must be between 8 to 128 characters. Press 'Generate Password' to try again.")
 
   }
 
+  if (passwordSelections === "") {
+
+  alert("CHARACTER REQUIREMENT NOT MET! Password requires at least one of the following; lowercase, uppercase, numeric, and/or special characters. Press 'Generate Password' to try again.")
+
+  password = ""
+
+  }
+  // Currently stuck on alerting user if they do not select the correct number of characters and if they do not select and of the character types. Also for some reason, when I select 8 character limit with all character types, not all character types appear in the password generated. Sometimes character types still show up in generated password even though they weren't selected. 
 
 
   // Code out for loop up until the desired character limit is reached, which is stored in the 'userLength' variable. 
