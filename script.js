@@ -67,7 +67,7 @@ function generatePassword() {
 
   }
 
-  
+
   if (userUppercase === true) {
 
     passwordSelections = passwordSelections + uppercase;
@@ -106,9 +106,9 @@ function generatePassword() {
 
   if (passwordSelections === "") {
 
-  alert("CHARACTER REQUIREMENT NOT MET! Password requires at least one of the following; lowercase, uppercase, numeric, and/or special characters. Press 'Generate Password' to try again.");
+    alert("CHARACTER REQUIREMENT NOT MET! Password requires at least one of the following; lowercase, uppercase, numeric, and/or special characters. Press 'Generate Password' to try again.");
 
-  password = "";
+    password = "";
 
   }
   // Currently stuck on alerting user if they do not select the correct number of characters and if they do not select and of the character types. Also for some reason, when I select 8 character limit with all character types, not all character types appear in the password generated. Sometimes character types still show up in generated password even though they weren't selected. 
