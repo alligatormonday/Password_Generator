@@ -18,22 +18,22 @@ function writePassword() {
  */
 function generatePassword() {
 
-  const lowercase = "abcdefghijklmnopqrstuvwxyz"
+  const lowercase = "abcdefghijklmnopqrstuvwxyz";
 
-  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  const numeric = "0123456789"
+  const numeric = "0123456789";
 
-  const special = "~!@#$%^&*()-_=+"
+  const special = "~!@#$%^&*()-_=+";
   // console.log(uppercase[4])
 
   // prompt for password criteria 
   // Collect data from user
-  let userLength = prompt("Choose amount of characters between 8 to 128")
-  let userLowercase = confirm("Do you want lowercase characters?")
-  let userUppercase = confirm("Do you want uppercase characters?")
-  let userNumeric = confirm("Do you want numeric characters?")
-  let userSpecial = confirm("Do you want special characters?")
+  let userLength = prompt("Choose amount of characters between 8 to 128");
+  let userLowercase = confirm("Do you want lowercase characters?");
+  let userUppercase = confirm("Do you want uppercase characters?");
+  let userNumeric = confirm("Do you want numeric characters?");
+  let userSpecial = confirm("Do you want special characters?");
   // console.log(userLength, userLowercase)
   // validate user responses 
 
@@ -57,34 +57,34 @@ function generatePassword() {
   // Based on users character choice, randomize the string of data for that given character/variable. 
   // 
 
-  userLength = parseInt(userLength)
+  userLength = parseInt(userLength);
 
 
 
   if (userLowercase === true) {
 
-    passwordSelections = passwordSelections + lowercase
+    passwordSelections = passwordSelections + lowercase;
 
   }
 
   
   if (userUppercase === true) {
 
-    passwordSelections = passwordSelections + uppercase
+    passwordSelections = passwordSelections + uppercase;
 
   }
 
 
   if (userNumeric === true) {
 
-    passwordSelections = passwordSelections + numeric
+    passwordSelections = passwordSelections + numeric;
 
   }
 
 
   if (userSpecial === true) {
 
-    passwordSelections = passwordSelections + special
+    passwordSelections = passwordSelections + special;
 
   }
   // console.log(passwordSelections)
@@ -93,22 +93,22 @@ function generatePassword() {
 
     for (let i = 0; i < userLength; i++) {
       let randomCharacter = passwordSelections[Math.floor(Math.random() * passwordSelections.length)];
-      password = password + randomCharacter
+      password = password + randomCharacter;
     }
 
   }
 
   else {
 
-    alert("CHARACTER REQUIREMENT NOT MET! Character limit must be between 8 to 128 characters. Press 'Generate Password' to try again.")
+    alert("CHARACTER REQUIREMENT NOT MET! Character limit must be between 8 to 128 characters. Press 'Generate Password' to try again.");
 
   }
 
   if (passwordSelections === "") {
 
-  alert("CHARACTER REQUIREMENT NOT MET! Password requires at least one of the following; lowercase, uppercase, numeric, and/or special characters. Press 'Generate Password' to try again.")
+  alert("CHARACTER REQUIREMENT NOT MET! Password requires at least one of the following; lowercase, uppercase, numeric, and/or special characters. Press 'Generate Password' to try again.");
 
-  password = ""
+  password = "";
 
   }
   // Currently stuck on alerting user if they do not select the correct number of characters and if they do not select and of the character types. Also for some reason, when I select 8 character limit with all character types, not all character types appear in the password generated. Sometimes character types still show up in generated password even though they weren't selected. 
