@@ -2,11 +2,25 @@
 
 ## Author: alligatormonday (Joseph Jepson)
 
+## Technologies Used
+
+* JavaScript
+
+## Deployment
+
+![Image of Password Generator](https://i.imgur.com/BMbM4oc.png)
+
+![Image of Password Generator](https://i.imgur.com/0ePxj4b.png)
+
+![Image of Password Generator](https://i.imgur.com/jtNHy8Z.png)
+
+![Image of Password Generator](https://i.imgur.com/WCPnSAz.png)
+
+View deployment: [Password Generator](https://alligatormonday.github.io/Password_Generator/)
+
 ## Description: 
 
 Submission for my third assignment within the Full-Stack Web Development Coding Bootcamp via University of Arizona. 
-
-View deployment here: [Password Generator](https://alligatormonday.github.io/Password_Generator/)
 
 In this assignment, I needed to create an application that generates a random password based on user-selected criteria. The assignment featured clean and polished HTML and CSS code to allow for the user interface to be responsive. My task was to use JavaScript to provide the user a randomly generated password with the following parameters:
 * When the user clicks the 'Generate Password' button, the user is presented with a series of prompts.
